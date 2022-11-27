@@ -16,6 +16,9 @@
 		F2AEA3DA2924F45100BB1901 /* RunToWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEA3D92924F45100BB1901 /* RunToWorkTests.swift */; };
 		F2AEA3E42924F45100BB1901 /* RunToWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEA3E32924F45100BB1901 /* RunToWorkUITests.swift */; };
 		F2AEA3E62924F45100BB1901 /* RunToWorkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEA3E52924F45100BB1901 /* RunToWorkUITestsLaunchTests.swift */; };
+		F2AEA3F42924F80C00BB1901 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F2AEA3F32924F80C00BB1901 /* SnapKit */; };
+		F2B2A97729335690000C7641 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2B2A97629335690000C7641 /* KakaoSDKAuth */; };
+		F2B2A97929335690000C7641 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = F2B2A97829335690000C7641 /* KakaoSDKCommon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2AEA3F42924F80C00BB1901 /* SnapKit in Frameworks */,
+				F2B2A97929335690000C7641 /* KakaoSDKCommon in Frameworks */,
+				F2B2A97729335690000C7641 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,11 @@
 			dependencies = (
 			);
 			name = RunToWork;
+			packageProductDependencies = (
+				F2AEA3F32924F80C00BB1901 /* SnapKit */,
+				F2B2A97629335690000C7641 /* KakaoSDKAuth */,
+				F2B2A97829335690000C7641 /* KakaoSDKCommon */,
+			);
 			productName = RunToWork;
 			productReference = F2AEA3BF2924F44D00BB1901 /* RunToWork.app */;
 			productType = "com.apple.product-type.application";
@@ -208,13 +219,17 @@
 			};
 			buildConfigurationList = F2AEA3BA2924F44D00BB1901 /* Build configuration list for PBXProject "RunToWork" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
 			mainGroup = F2AEA3B62924F44D00BB1901;
+			packageReferences = (
+				F2AEA3F22924F80C00BB1901 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F2B2A97529335690000C7641 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = F2AEA3C02924F44D00BB1901 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -610,6 +625,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2AEA3F22924F80C00BB1901 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		F2B2A97529335690000C7641 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2AEA3F32924F80C00BB1901 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2AEA3F22924F80C00BB1901 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F2B2A97629335690000C7641 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2B2A97529335690000C7641 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		F2B2A97829335690000C7641 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2B2A97529335690000C7641 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2AEA3B72924F44D00BB1901 /* Project object */;
 }
